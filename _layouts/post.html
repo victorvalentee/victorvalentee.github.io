@@ -1,0 +1,28 @@
+---
+layout: default
+permalink: pretty
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>
+      <span class="mid-dot-divider">•</span>
+      <span class="reading-time">
+         {{ content | number_of_words | divided_by:180 }} min read
+      </span>
+    </p>
+    <span class="tags">
+      {% for category in page.categories %}
+         <code class="highlighter-rouge">{{ category }}</code>
+      {% endfor %}
+    </span>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</ul>
+</article>
