@@ -1,5 +1,5 @@
 - [ ] Add styling for links. Right now they are not differentiated from plain text until you hover on them.
-- [ ] Change color scheme to dark mode.
+- [x] Change color scheme to dark mode.
 - [ ] Edit index / home page.
 - [ ] Edit about page.
 - [ ] Edit resume page.

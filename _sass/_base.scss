@@ -14,6 +14,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
+    text-align:justify;
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     line-height: $base-line-height;
@@ -97,19 +98,13 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
     color: $text-color;
-    text-decoration: none;
 
     &:visited {
         color: darken($text-color, 15%);
     }
 
     &:hover {
-        color: $text-color;
-        text-shadow:
-            -3px 0px 3px yellow,
-            3px 0px 3px yellow,
-            6px 0px 6px yellow,
-            -6px 0px 6px yellow;
+        color: #f60;
     }
 }
 
@@ -155,9 +150,8 @@ blockquote p {
 pre,
 code {
     font-size: $base-font-size - 3;
-    border: 1.3px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #fdf6e3;
+    background-color: black;
     font-family: 'Andale Mono', monospace;
 }
 

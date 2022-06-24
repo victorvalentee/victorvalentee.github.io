@@ -32,7 +32,6 @@
     }
 
     .page-link {
-        color: $text-color;
         line-height: $base-line-height;
         font-size: $base-font-size - 2;
         letter-spacing: .013em;
@@ -49,6 +48,10 @@
            }
         }
     }
+
+    .page-link:visited {
+        color: $text-color;
+    }
 }
 
 .post .tags code + code {
@@ -60,11 +63,10 @@
    font-family: 'Andale Mono', monospace;
    font-weight: 400;
    font-style: normal;
-   color: rgba(0, 0, 0, 0.44);
    font-size: $base-font-size - 5;
    letter-spacing: 0;
    text-decoration: none;
-   background: #fafafa;
+   background: #212121;
    border-radius: 3px;
    border: 1px solid #f0f0f0;
    text-transform: lowercase;
@@ -106,6 +108,19 @@ background: transparent;
 
 .post-header + .post-content {
    margin-top: $spacing-unit * 1.5;
+}
+
+/**
+ * Links
+ */
+.hidden-link {
+    color: $text-color;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+.hidden-link:visited {
+    color: $text-color;
 }
 
 
@@ -512,11 +527,15 @@ iframe {
 }
 
 .icon--github:hover svg path {
-   fill: #800080;
+   fill: #f60;
 }
 
 .icon--mail:hover svg path {
-   fill: #d14836;
+   fill: #f60;
+}
+
+.icon--linkedin:hover svg path {
+   fill: #f60;
 }
 
 .icon--rss svg, .icon--mail svg {
