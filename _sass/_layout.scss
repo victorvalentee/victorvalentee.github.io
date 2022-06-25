@@ -3,7 +3,8 @@
  */
 .site-header {
     padding-top: 5px;
-    border-bottom: 1px solid $grey-color-light;
+    padding-bottom: 30px;
+    //border-bottom: 1px solid $text-color;
     min-height: 56px;
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -115,7 +116,6 @@ background: transparent;
  */
 .hidden-link {
     color: $text-color;
-    pointer-events: none;
     text-decoration: none;
 }
 
@@ -128,7 +128,7 @@ background: transparent;
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    //border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
 
     .credits {
@@ -461,7 +461,7 @@ h1.post-title {
 .face {
     position: relative;
     width: 130px;
-    margin: 12px auto 20px auto;
+    margin: 20px auto 20px auto;
 }
 
 .face a {
