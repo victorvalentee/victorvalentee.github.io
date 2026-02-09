@@ -1,11 +1,7 @@
 @charset "utf-8";
 
-/* ========================================
-   CSS Variables (Design Tokens)
-   ======================================== */
-
+/* Variables */
 :root {
-  /* Typography */
   --font-family-mono: 'Space Mono', 'Andale mono', monospace;
   --font-size-base: 17px;
   --font-size-small: 14px;
@@ -13,36 +9,22 @@
   --font-weight-bold: 700;
   --line-height-base: 1.75;
 
-  /* Colors */
   --color-text-primary: #d8c6d4;
   --color-text-secondary: #d7d7d7;
   --color-text-visited: #b3a1af;
   --color-background: #212121;
   --color-accent-hover: #f60;
 
-  /* Layout */
   --content-max-width: 850px;
   --spacing-unit: 30px;
   --animation-duration: 500ms;
 }
 
-
-/* ========================================
-   CSS Reset
-   ======================================== */
-
-body,
-h1, h2, h3,
-p,
-ul {
+/* Reset & Base */
+body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
 }
-
-
-/* ========================================
-   Base Styles
-   ======================================== */
 
 body {
   text-align: justify;
@@ -50,179 +32,79 @@ body {
   color: var(--color-text-primary);
   background-color: var(--color-background);
   -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
   font-kerning: normal;
   font-variant-ligatures: no-common-ligatures;
+  font-feature-settings: "kern" 1;
 }
 
-
-/* ========================================
-   Typography
-   ======================================== */
-
+/* Typography */
 h1, h2, h3 {
-  margin-top: 50px;
-  margin-bottom: 12px;
+  margin: 50px 0 12px;
   font-family: var(--font-family-mono);
   font-weight: var(--font-weight-bold);
   line-height: 1.175em;
   letter-spacing: -0.0206em;
 }
 
-h1 {
-  font-size: 37px;
-  margin-bottom: 15px;
-}
+h1 { font-size: 37px; margin-bottom: 15px; }
+h2 { font-size: 30px; }
+h3 { font-size: 25px; }
 
-h2 {
-  font-size: 30px;
-}
+p { margin-bottom: 15px; }
+p + p { margin-top: 26px; }
 
-h3 {
-  font-size: 25px;
-}
+a { color: var(--color-text-primary); text-decoration: underline; }
+a:visited { color: var(--color-text-visited); }
+a:hover { color: var(--color-accent-hover); }
 
-p {
-  margin-bottom: 15px;
-}
+img { max-width: 100%; vertical-align: middle; }
 
-p + p {
-  margin-top: 26px;
-}
-
-
-/* ========================================
-   Links
-   ======================================== */
-
-a {
-  color: var(--color-text-primary);
-  text-decoration: underline;
-}
-
-a:visited {
-  color: var(--color-text-visited);
-}
-
-a:hover {
-  color: var(--color-accent-hover);
-}
-
-
-/* ========================================
-   Images
-   ======================================== */
-
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-
-/* ========================================
-   Layout Components
-   ======================================== */
-
+/* Layout & Components */
 .wrapper {
   max-width: calc(var(--content-max-width) - (var(--spacing-unit) * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--spacing-unit);
-  padding-left: var(--spacing-unit);
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
 }
+.wrapper::after { content: ""; display: table; clear: both; }
 
-.wrapper::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.page-content {
+.page-content, .site-footer {
   padding: var(--spacing-unit) 0;
 }
 
-
-/* ========================================
-   Header
-   ======================================== */
-
+/* Header */
 .site-header {
-  padding-top: 5px;
-  padding-bottom: var(--spacing-unit);
+  padding: 5px 0 var(--spacing-unit);
   min-height: 56px;
   position: relative;
 }
 
 .site-header h3 {
   text-align: center;
-  margin: 15px 0 8px 0;
-  transition: color var(--animation-duration) linear;
+  margin: 15px 0 8px;
 }
 
-.site-header:hover {
-  color: var(--color-accent-hover);
+.site-description, .site-footer .credits {
+  text-align: center;
+  color: var(--color-text-secondary);
 }
 
 .site-description {
-  text-align: center;
-  color: var(--color-text-secondary);
-  font-weight: 300;
+  font: 300 15px var(--font-family-mono), Georgia, serif;
   letter-spacing: 0.33px;
-  font-family: var(--font-family-mono), Georgia, serif;
-  font-size: 15px;
 }
 
-.face {
-  position: relative;
-  width: 130px;
-  margin: 20px auto;
-}
+.face { width: 130px; margin: 20px auto; position: relative; }
+.face a { display: block; }
+.face img { border-radius: 50%; }
 
-.face a {
-  display: block;
-}
-
-.face img {
-  border-radius: 50%;
-}
-
-
-/* ========================================
-   Footer
-   ======================================== */
-
-.site-footer {
-  padding: var(--spacing-unit) 0;
-}
-
-.site-footer .credits {
-  color: var(--color-text-secondary);
-  text-align: center;
-}
-
-
-/* ========================================
-   Social Media Icons
-   ======================================== */
-
+/* Social Icons */
 .social-media-list {
   list-style: none;
-  margin: 0;
-  margin-top: 20px;
+  margin: 20px 0 0;
   text-align: center;
 }
-
-.social-media-list li {
-  display: inline-block !important;
-}
-
-.social-media-list span.icon {
-  display: block;
-  width: 26px;
-}
+.social-media-list li { display: inline-block !important; }
+.social-media-list span.icon { display: block; width: 26px; }
 
 .icon > svg {
   display: inline-block;
@@ -230,71 +112,41 @@ img {
   height: 16px;
   vertical-align: middle;
 }
+.icon--mail svg { width: 20px; height: 20px; }
 
+/* Shared Transitions */
+.site-header h3,
+.principle h3,
+.kc-intro h2,
 .icon svg path {
-  fill: var(--color-text-secondary);
-  transition: fill var(--animation-duration) linear;
+  transition: all var(--animation-duration) linear;
+  transition-property: color, fill;
+}
+
+.icon svg path { fill: var(--color-text-secondary); }
+
+/* Hover States */
+.site-header:hover,
+.principle:hover h3,
+.kc-intro:hover h2,
+body:has(.intro:hover) .site-header h3 {
+  color: var(--color-accent-hover);
 }
 
 .icon:hover svg path {
   fill: var(--color-accent-hover);
 }
 
-.icon--mail svg {
-  width: 20px;
-  height: 20px;
-}
-
-
-/* ========================================
-   Title Animations
-   ======================================== */
-
-.principle h3 {
-  transition: color var(--animation-duration) linear;
-}
-
-.principle:hover h3 {
-  color: var(--color-accent-hover);
-}
-
-.kc-intro h2 {
-  transition: color var(--animation-duration) linear;
-}
-
-.kc-intro:hover h2 {
-  color: var(--color-accent-hover);
-}
-
-body:has(.intro:hover) .site-header h3 {
-  color: red;
-}
-
-
-/* ========================================
-   Media Queries
-   ======================================== */
-
+/* Media Queries */
 @media screen and (max-width: 585px) {
-  body {
-    line-height: 1.6625;
-  }
-
+  body { line-height: 1.6625; }
   h1 { font-size: 35px; }
   h2 { font-size: 28px; }
   h3 { font-size: 23px; }
 
   .wrapper {
     max-width: calc(var(--content-max-width) - var(--spacing-unit));
-    padding-right: var(--spacing-unit);
-    padding-left: var(--spacing-unit);
   }
-
-  .site-description {
-    font-size: var(--font-size-small);
-  }
-
-  .home {
-    margin-top: var(--spacing-unit);
-  }
+  .site-description { font-size: var(--font-size-small); }
+  .home { margin-top: var(--spacing-unit); }
 }
