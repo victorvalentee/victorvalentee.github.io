@@ -1,1 +1,0 @@
-"This is not some gold-plated over engineering. This is practical and pragmatic. They aim to retain and sustain their ability to make changes effectively and efficiently over the long haul." -- Dave Farley 
