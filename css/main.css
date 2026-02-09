@@ -422,10 +422,6 @@ pre > code {
    Home Page
    ======================================== */
 
-.home {
-  margin-top: 60px;
-}
-
 @media screen and (max-width: 585px) {
   .home {
     margin-top: 30px;
