@@ -1,74 +1,162 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="home">
-  <p>
-    Hi! My name is Victor. I am a senior data engineer and an enthusiast of software craftsmanship and design. 
-    I strive for writing code that is both useful and beautiful to look at, or as I like to call it, <em>katana-code</em>.
-  </p>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <div id="katana-code-principles">
-    <h2>Katana-code Principles</h2>
-    <p>The following are the main principles that guide my reasoning and behavior when building, delivering, and maintaining software.</p>
+  <title>Victor Valente</title>
+  <meta name="description" content="Musings on craftsmanship">
 
-    <h3>Kaizen</h3>
-    <p>
-      <em>
-        "A complex system that works invariably evolved from a simple system that worked."
-      </em> &mdash; John Gall.
-    </p>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,700i|Merriweather:300,300i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
 
-    <p>
-      Start with a working combination of processes, design, and code. 
-      Deploy. 
-      Make gradual improvements to this combination. 
-      Repeat until the result is satisfactory.
-    </p>
+<body>
 
-    <h3>Integrity</h3>
-    <p>
-      <em>
-        "If they are going to use our swords, I shall make one that will not break."
-      </em> &mdash; Amakuni Yasutsuna, legendary swordsmith.
-    </p>
-    <p>
-      Aim for clear specs, type-safety, controlled side-effects, proper error handling, thorough testing,
-      reproducible builds, continuous integration and delivery.
-    </p>
+  <header class="site-header">
+    <div class="wrapper">
 
-    <h3>Purpose</h3>
-    <p>
-      <em>
-        "As we both know, without purpose, we would not exist.
-        It is purpose that created us. That guides us. That drives us. It is purpose that defines us."
-      </em> &mdash; Agent Smith, a piece of software.
-    </p>
-    <p>
-      A software product is a tool. Its value is not in itself, but in its ability to fulfill the real-world need that birthed it.
-      Solid MVV statements and clear OKRs go a long way in keeping what's really important in the forefront.
-    </p>
+      <div class="face">
+        <a href="/">
+          <img
+            title="Victor Valente"
+            alt="Victor Valente"
+            src="/images/profile_pic.jpeg"
+            class="photo"
+          />
+        </a>
+      </div>
 
-    <h3>Elegance</h3>
-    <p>
-      <em>
-        "When I have finished, if the solution is not beautiful, I know it is wrong."
-      </em> &mdash; R. Buckminster Fuller.
-    </p>
-    <p>
-      Elegant creations reflect the character of the creator. In the era of AI slop, I prioritize beauty, expressiveness, and clarity.
-    </p>
+      <a class="hidden-link" href="/">
+        <div>
+          <h3>Victor Valente</h3>
+          <p class="site-description">Musings on craftsmanship</p>
+        </div>
+      </a>
 
-    <h3>Unity</h3>
-    <p>
-      <em>
-        "A system can't be more coherent than the team that builds it."
-      </em>
-    </p>
-    <p>
-      The best software development teams (or any kind of team, for that matter) operate as one single organism.
-      I aim to build teams where the standards are high, communication is effective and fluid, responsibilities are well-defined, well-distributed, and well-executed.
-    </p>
+      <ul class="social-media-list">
+        <li>
+          <a href="https://linkedin.com/in/victorvalentee" target="_blank" title="LinkedIn">
+            <span class="icon icon--linkedin">
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="M19.75 5.39v13.22a1.14 1.14 0 0 1-1.14 1.14H5.39a1.14 1.14 0 0 1-1.14-1.14V5.39a1.14 1.14 0 0 1 1.14-1.14h13.22a1.14 1.14 0 0 1 1.14 1.14zM8.81 10.18H6.53v7.3H8.8v-7.3zM9 7.67a1.31 1.31 0 0 0-1.3-1.32h-.04a1.32 1.32 0 0 0 0 2.64A1.31 1.31 0 0 0 9 7.71v-.04zm8.46 5.37c0-2.2-1.4-3.05-2.78-3.05a2.6 2.6 0 0 0-2.3 1.18h-.07v-1h-2.14v7.3h2.28V13.6a1.51 1.51 0 0 1 1.36-1.63h.09c.72 0 1.26.45 1.26 1.6v3.91h2.28l.02-4.43z" fill="#A8A8A8"></path>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/victorvalentee" target="_blank" title="GitHub">
+            <span class="icon icon--github">
+              <svg viewBox="0 0 16 16">
+                <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:victorvalentee@gmail.com" target="_blank" title="Email">
+            <span class="icon icon--mail">
+              <svg viewBox="0 0 512 512">
+                <path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
 
+  <div class="page-content">
+    <div class="wrapper">
+
+      <div class="home">
+        <p>
+          Hi! My name is Victor. I am a senior data engineer and an enthusiast of software craftsmanship and design.
+          I strive for writing code that is both useful and beautiful to look at, or as I like to call it, <em>katana-code</em>.
+        </p>
+
+        <div id="katana-code-principles">
+          <h2>Katana-code Principles</h2>
+          <p>The following are the main principles that guide my reasoning and behavior when building, delivering, and maintaining software.</p>
+
+          <h3>Kaizen</h3>
+          <p>
+            <em>
+              "A complex system that works invariably evolved from a simple system that worked."
+            </em> &mdash; John Gall.
+          </p>
+
+          <p>
+            Start with a working combination of processes, design, and code.
+            Deploy.
+            Make gradual improvements to this combination.
+            Repeat until the result is satisfactory.
+          </p>
+
+          <h3>Integrity</h3>
+          <p>
+            <em>
+              "If they are going to use our swords, I shall make one that will not break."
+            </em> &mdash; Amakuni Yasutsuna, legendary swordsmith.
+          </p>
+          <p>
+            Aim for clear specs, type-safety, controlled side-effects, proper error handling, thorough testing,
+            reproducible builds, continuous integration and delivery.
+          </p>
+
+          <h3>Purpose</h3>
+          <p>
+            <em>
+              "As we both know, without purpose, we would not exist.
+              It is purpose that created us. That guides us. That drives us. It is purpose that defines us."
+            </em> &mdash; Agent Smith, a piece of software.
+          </p>
+          <p>
+            A software product is a tool. Its value is not in itself, but in its ability to fulfill the real-world need that birthed it.
+            Solid MVV statements and clear OKRs go a long way in keeping what's really important in the forefront.
+          </p>
+
+          <h3>Elegance</h3>
+          <p>
+            <em>
+              "When I have finished, if the solution is not beautiful, I know it is wrong."
+            </em> &mdash; R. Buckminster Fuller.
+          </p>
+          <p>
+            Elegant creations reflect the character of the creator. In the era of AI slop, I prioritize beauty, expressiveness, and clarity.
+          </p>
+
+          <h3>Unity</h3>
+          <p>
+            <em>
+              "A system can't be more coherent than the team that builds it."
+            </em>
+          </p>
+          <p>
+            The best software development teams (or any kind of team, for that matter) operate as one single organism.
+            I aim to build teams where the standards are high, communication is effective and fluid, responsibilities are well-defined, well-distributed, and well-executed.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p class="credits">
+        <a target="_blank" href="https://www.linkedin.com/in/victorvalentee/">LinkedIn</a>
+         ·
+        <a target="_blank" href="https://github.com/victorvalentee">Github</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

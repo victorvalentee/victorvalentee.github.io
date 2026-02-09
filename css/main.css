@@ -1,0 +1,486 @@
+@charset "utf-8";
+
+/* ========================================
+   CSS Variables (Design Tokens)
+   ======================================== */
+
+:root {
+  /* Typography */
+  --font-family-mono: 'Space Mono', 'Andale mono', monospace;
+  --font-size-base: 17px;
+  --font-size-small: 14px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height-base: 1.75;
+
+  /* Colors */
+  --color-text-primary: #d8c6d4;
+  --color-text-secondary: #d7d7d7;
+  --color-text-visited: #b3a1af;
+  --color-background: #212121;
+  --color-accent: #41b7d8;
+  --color-accent-hover: #f60;
+  --color-blockquote-background: #f9f9f9;
+  --color-blockquote-text: #3c3c3c;
+  --color-blockquote-border: #f5f5f5;
+  --color-code-background: black;
+
+  /* Layout */
+  --content-max-width: 850px;
+  --spacing-unit: 30px;
+  --breakpoint-mobile: 585px;
+  --breakpoint-tablet: 800px;
+}
+
+
+/* ========================================
+   CSS Reset
+   ======================================== */
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+blockquote,
+pre,
+hr,
+dl, dd, ol, ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ========================================
+   Base Styles
+   ======================================== */
+
+body {
+  text-align: justify;
+  font: var(--font-weight-normal) var(--font-size-base) / var(--line-height-base) var(--font-family-mono);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  font-variant-ligatures: no-common-ligatures;
+}
+
+@media screen and (max-width: 585px) {
+  body {
+    line-height: 1.6625;
+  }
+}
+
+
+/* ========================================
+   Typography
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 50px;
+  margin-bottom: 12px;
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.175em;
+  letter-spacing: -0.0206em;
+}
+
+h1 {
+  font-size: 37px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 585px) {
+  h1 { font-size: 35px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 23px; }
+  h4 { font-size: 18px; }
+}
+
+p,
+blockquote,
+pre,
+ul, ol, dl,
+figure {
+  margin-bottom: 15px;
+}
+
+p + p {
+  margin-top: 26px;
+}
+
+
+/* ========================================
+   Links
+   ======================================== */
+
+a {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--color-text-visited);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+.hidden-link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.hidden-link:visited {
+  color: var(--color-text-primary);
+}
+
+
+/* ========================================
+   Images
+   ======================================== */
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+img.medium {
+  max-width: 75%;
+  max-height: 65vh;
+}
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Lists
+   ======================================== */
+
+ul, ol {
+  margin-left: 49.5px;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+.post-content li + li {
+  margin-top: 0.5em;
+}
+
+.post-content ul,
+.post-content ol,
+.post-content .highlight {
+  margin-top: 20.4px;
+  margin-bottom: 39px;
+}
+
+
+/* ========================================
+   Blockquotes
+   ======================================== */
+
+blockquote {
+  color: var(--color-blockquote-text);
+  background: var(--color-blockquote-background);
+  border-left: 6px solid var(--color-blockquote-border);
+  padding: 40.5px;
+  font-weight: 400;
+  margin: 25px 0 35px 0;
+  font-style: italic;
+  text-align: justify;
+}
+
+blockquote::before {
+  color: #ccc;
+  content: "\201C";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: block;
+  text-align: justify;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+  margin-top: 0;
+}
+
+
+/* ========================================
+   Code
+   ======================================== */
+
+pre,
+code {
+  font-size: 14px;
+  border-radius: 3px;
+  background-color: var(--color-code-background);
+  font-family: 'Andale Mono', monospace;
+}
+
+code {
+  padding: 2px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+}
+
+pre > code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+/* ========================================
+   Layout Components
+   ======================================== */
+
+.wrapper {
+  max-width: calc(var(--content-max-width) - (var(--spacing-unit) * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing-unit);
+  padding-left: var(--spacing-unit);
+}
+
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 585px) {
+  .wrapper {
+    max-width: calc(var(--content-max-width) - var(--spacing-unit));
+    padding-right: var(--spacing-unit);
+    padding-left: var(--spacing-unit);
+  }
+}
+
+.page-content {
+  padding: var(--spacing-unit) 0;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.site-header {
+  padding-top: 5px;
+  padding-bottom: 30px;
+  min-height: 56px;
+  position: relative;
+}
+
+.site-header h3 {
+  text-align: center;
+  margin: 15px 0 8px 0;
+}
+
+.site-description {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  letter-spacing: 0.33px;
+  font-family: var(--font-family-mono), Georgia, serif;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 585px) {
+  .site-description {
+    font-size: 14px;
+  }
+}
+
+.face {
+  position: relative;
+  width: 130px;
+  margin: 20px auto;
+}
+
+.face a {
+  display: block;
+}
+
+.face img {
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.site-footer {
+  padding: var(--spacing-unit) 0;
+}
+
+.site-footer .credits {
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+
+/* ========================================
+   Social Media Icons
+   ======================================== */
+
+.social-media-list {
+  list-style: none;
+  margin: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-media-list li {
+  display: inline-block !important;
+}
+
+.social-media-list span.icon {
+  display: block;
+  width: 26px;
+}
+
+.icon > svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.icon svg path {
+  fill: var(--color-text-secondary);
+  transition: fill 1000ms linear;
+}
+
+.icon--github:hover svg path {
+  fill: var(--color-accent-hover);
+}
+
+.icon--mail:hover svg path {
+  fill: var(--color-accent-hover);
+}
+
+.icon--linkedin:hover svg path {
+  fill: var(--color-accent-hover);
+}
+
+.icon--mail svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* ========================================
+   Home Page
+   ======================================== */
+
+.home {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 585px) {
+  .home {
+    margin-top: 30px;
+  }
+}
+
+
+/* ========================================
+   Post Content
+   ======================================== */
+
+.post-content {
+  margin-bottom: 60px;
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content blockquote {
+  font-family: var(--font-family-mono);
+  font-weight: 300;
+  font-size: var(--font-size-base);
+}
+
+@media screen and (max-width: 585px) {
+  .post-content p,
+  .post-content ul,
+  .post-content ol,
+  .post-content blockquote {
+    font-size: 16px;
+  }
+}
+
+.post-content li a {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.24);
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+@media screen and (max-width: 585px) {
+  .post-content li a {
+    font-size: 15px;
+  }
+}
+
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+
+.centered {
+  text-align: center;
+}
+
+iframe {
+  margin: 15px auto;
+  max-width: 100%;
+}
