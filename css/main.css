@@ -23,6 +23,7 @@
   /* Layout */
   --content-max-width: 850px;
   --spacing-unit: 30px;
+  --animation-duration: 500ms;
 }
 
 
@@ -110,15 +111,6 @@ a:hover {
   color: var(--color-accent-hover);
 }
 
-.hidden-link {
-  color: var(--color-text-primary);
-  text-decoration: none;
-}
-
-.hidden-link:visited {
-  color: var(--color-text-primary);
-}
-
 
 /* ========================================
    Images
@@ -167,6 +159,11 @@ img {
 .site-header h3 {
   text-align: center;
   margin: 15px 0 8px 0;
+  transition: color var(--animation-duration) linear;
+}
+
+.site-header:hover {
+  color: var(--color-accent-hover);
 }
 
 .site-description {
@@ -236,7 +233,7 @@ img {
 
 .icon svg path {
   fill: var(--color-text-secondary);
-  transition: fill 1000ms linear;
+  transition: fill var(--animation-duration) linear;
 }
 
 .icon:hover svg path {
@@ -246,6 +243,31 @@ img {
 .icon--mail svg {
   width: 20px;
   height: 20px;
+}
+
+
+/* ========================================
+   Title Animations
+   ======================================== */
+
+.principle h3 {
+  transition: color var(--animation-duration) linear;
+}
+
+.principle:hover h3 {
+  color: var(--color-accent-hover);
+}
+
+.kc-intro h2 {
+  transition: color var(--animation-duration) linear;
+}
+
+.kc-intro:hover h2 {
+  color: var(--color-accent-hover);
+}
+
+body:has(.intro:hover) .site-header h3 {
+  color: red;
 }
 
 
